@@ -13,7 +13,7 @@ jQuery(function($) {
 		Adjust();
 		var url = window.location.href;
 		console.log(url); 
-		var accessToken = url.substring(54,70);
+		var accessToken = url.substring(54,100);
 		console.log(accessToken);
 		
 	});
