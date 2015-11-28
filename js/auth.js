@@ -11,7 +11,8 @@ jQuery(function($) {
 	$(window).load(function(){
 		loaded = true;
 		Adjust();
-		var url = window.location.href; 
+		var url = window.location.href;
+		console.log(url); 
 		var accessToken = getUrlParameter('access_token');
 		console.log(accessToken);
 		
