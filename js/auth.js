@@ -13,7 +13,7 @@ jQuery(function($) {
 		Adjust();
 		var url = window.location.href;
 		console.log(url); 
-		var accessToken = getUrlParameter('access_token');
+		var accessToken = $.urlParam('access_token');
 		console.log(accessToken);
 		
 	});
@@ -53,20 +53,15 @@ jQuery(function($) {
 	}
 
 // FROM: http://stackoverflow.com/questions/19491336/get-url-parameter-jquery
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('#'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
+$.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    if (results==null){
+       return null;
     }
-};
+    else{
+       return results[1] || 0;
+    }
+}
 	
 
 
