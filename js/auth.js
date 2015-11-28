@@ -229,7 +229,7 @@ function draw(instagramFeed, gutterWidth, biggestWidth) {
   dataDivHeight += segmentWidth;
   // set the dimensions of the div explicitly to vertically center
   $(\'div#immixr\').css({width: elementWidth, height: dataDivHeight, \'margin-top\': -(dataDivHeight/2)});
-}'
+}';
       
 
 
