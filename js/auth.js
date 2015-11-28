@@ -55,7 +55,7 @@ jQuery(function($) {
 // FROM: http://stackoverflow.com/questions/19491336/get-url-parameter-jquery
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
+        sURLVariables = sPageURL.split('#'),
         sParameterName,
         i;
 
