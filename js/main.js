@@ -77,6 +77,7 @@ jQuery(function($) {
 
 			immixr(8, .1, userID, accessToken, biggestWidth);
 			immixr2(0, 1, userID, accessToken, 100);
+			immixr3(5, .2, userID, accessToken, 145);
 
 		});
 	}

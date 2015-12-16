@@ -73,8 +73,7 @@ function draw(instagramFeed, gutterWidth, biggestWidth) {
   while(availableHeight > smallWidth) {
 
     // if there's no more room on this row, then move to the next row if possible..
-    if(availableWidth < smallWidth) {
-      // before moving to the next row, set the width and height of the current row so it can be centered using explicit dimensions
+    if((availableWidth < smallWidth) && (availableHeight > (bigWidth + segmentWidth))) {      // before moving to the next row, set the width and height of the current row so it can be centered using explicit dimensions
       $(currentRow).css({width: elementWidth - availableWidth, height: (bigWidth + segmentWidth)});
       // reset left to start at one segment width
       left = segmentWidth;
@@ -111,6 +110,7 @@ function draw(instagramFeed, gutterWidth, biggestWidth) {
         dataDivHeight += (smallWidth + segmentWidth);
         $(currentRow).css({width: elementWidth - availableWidth, height: smallWidth + segmentWidth});
         lastRowisSmall = 1;
+        break;
       }
       // increment the cursor to the next image
       cursor++;
