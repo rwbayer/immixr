@@ -172,22 +172,28 @@ header .intro-text {
 		display: none;
 	}
 
-	div#tablet {
-		display: none;
-	}
+	
 	.segue-row {
 		margin-top: 50px;
 	}
 
 
 }
+@media(max-width: 1199px) {
+	div#tablet {
+		display: none;
+	}
+}
+@media(min-width: 1200px) {
+	div#tablet {
+		display: block;
+	}
+}
 @media(min-width:769px) { 
 	a#aboutButton {
 		display: inline-block;
 	}
-	div#tablet {
-		display: block;
-	}
+
 	.segue-row {
 		margin-top: 90px;
 	}
