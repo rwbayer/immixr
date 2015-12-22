@@ -7,7 +7,7 @@ jQuery(function($) {
 	//Variables
 	var fixed_point = 0;
 	var loaded = false;
-	var windowWidth = $(window).width();
+	var windowWidth;
 
 	// Author Code Here
 	$(window).load(function(){
@@ -79,7 +79,7 @@ jQuery(function($) {
 				var biggestWidth = 213;
 				if(windowWidth != $(window).width()) {
 					windowWidth = $(window).width();
-					
+
 					immixr(8, .1, userID, accessToken, biggestWidth);
 					immixr2(0, 1, userID, accessToken, 100);
 					immixr3(5, .2, userID, accessToken, 145);
