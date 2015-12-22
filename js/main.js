@@ -73,13 +73,17 @@ jQuery(function($) {
 				fixed_point = $('.navbar').offset().top;
 
 			$(document).ready(function() {
+
 				var userID = "1520190960";
 				var accessToken = "1520190960.b5eb537.43e42d9b4992467fb9bba147394d1163";
 				var biggestWidth = 213;
-
-				immixr(8, .1, userID, accessToken, biggestWidth);
-				immixr2(0, 1, userID, accessToken, 100);
-				immixr3(5, .2, userID, accessToken, 145);
+				if(windowWidth != $(window).width()) {
+					windowWidth = $(window).width();
+					
+					immixr(8, .1, userID, accessToken, biggestWidth);
+					immixr2(0, 1, userID, accessToken, 100);
+					immixr3(5, .2, userID, accessToken, 145);
+				}
 
 			});
 	}
