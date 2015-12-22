@@ -294,6 +294,9 @@ header .intro-text {
 	border:2px solid #7cc576;
 	color:white;
 }
+a.btn.btn-white.sample-button.github {
+	z-index: 1000;
+}
 
 a.green-link {
 	color: #7cc576;
