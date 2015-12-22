@@ -7,6 +7,7 @@ jQuery(function($) {
 	//Variables
 	var fixed_point = 0;
 	var loaded = false;
+	var windowWidth = $(window).width();
 
 	// Author Code Here
 	$(window).load(function(){
@@ -58,8 +59,6 @@ jQuery(function($) {
 
 	function Adjust(){
 	// iOS resizing fix from: http://stackoverflow.com/questions/8898412/iphone-ipad-triggering-unexpected-resize-events
-      var windowWidth = $(window).width();
-      
      
         // Check window width has actually changed and it's not just iOS triggering a resize event on scroll
         if ($(window).width() != windowWidth) {
