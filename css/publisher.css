@@ -420,6 +420,9 @@ section.reviews {
 .owl-book  .item:hover .overlay {
 	opacity: 1;
 }
+.owl-item {
+	min-width: 380px;
+}
 .owl-book .item img {
 	width:100%;
 	margin:15% auto;
