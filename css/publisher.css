@@ -175,6 +175,9 @@ header .intro-text {
 	div#tablet {
 		display: none;
 	}
+	.segue-row {
+		margin-top: 50px;
+	}
 
 
 }
@@ -185,6 +188,9 @@ header .intro-text {
 	div#tablet {
 		display: block;
 	}
+	.segue-row {
+		margin-top: 90px;
+	}
 }
 
 .container {
@@ -194,6 +200,9 @@ header .intro-text {
 .main-nav {
 
 }
+
+
+
 
 .navbar {
 	position: relative;
