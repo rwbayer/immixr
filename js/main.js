@@ -70,33 +70,17 @@ jQuery(function($) {
 		if(!$('.navbar').hasClass("nav-fixed") && loaded)
 			fixed_point = $('.navbar').offset().top;
 
-		$(document).ready(function() {
-			var userID = "1520190960";
-			var accessToken = "1520190960.b5eb537.43e42d9b4992467fb9bba147394d1163";
-			var biggestWidth = 213;
-
-		});
 	}
 
-	 // iOS resizing fix from: http://stackoverflow.com/questions/8898412/iphone-ipad-triggering-unexpected-resize-events
-      var windowWidth = $(window).width();
-      
-      // if window is resized (for real), reload the page to fix layout
-      $(window).resize(function(){
-        // Check window width has actually changed and it's not just iOS triggering a resize event on scroll
-        if ($(window).width() != windowWidth) {
+	$(document).ready(function() {
+		var userID = "1520190960";
+		var accessToken = "1520190960.b5eb537.43e42d9b4992467fb9bba147394d1163";
+		var biggestWidth = 213;
 
-            // Update the window width for next time
-            windowWidth = $(window).width();
-
-            // Do stuff here
-            immixr(8, .1, userID, accessToken, biggestWidth);
-			immixr2(0, 1, userID, accessToken, 100);
-			immixr3(5, .2, userID, accessToken, 145);
-        }
-
-        // Otherwise do nothing
-      });
+		immixr(8, .1, userID, accessToken, biggestWidth);
+		immixr2(0, 1, userID, accessToken, 100);
+		immixr3(5, .2, userID, accessToken, 145);
+	});
 	
 	$('.sample-button').click(function(event){
 		$('#sample-form').slideDown();
