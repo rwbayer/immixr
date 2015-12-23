@@ -14,36 +14,38 @@
 	<link rel="stylesheet" type="text/css" href="css/lightbox.css">
 	<link id="main" rel="stylesheet" type="text/css" href="css/publisher.css">
 
+	<!-- Social properties -->
+	<meta property="og:site_name" content="immixr"/>
+	<meta property="og:title" content="immixr v2.0: an easy instagram collage for your website"/>
+	<meta property="og:image" content="img/immixr.png">
+	<meta property="og:url" content="http://www.immixr.me">
+
 	<!-- Include immixr style sheets -->
 	<link rel="stylesheet" type="text/css" href="css/immixr.css">
 
 </head>
 <body>
 <div id="wrapper" class="behind">
-<header>
+<header id="land">
 	<div id="immixr"></div>
 	<div class="container">
-			<!-- <div class="col-md-6 col-sm-12 wow animated fadeInUp">
-				<div class="intro-book">
-					<img src="img/book1.png" alt="">
-				</div>
-			</div> -->
-			<div class="col-md-6 col-md-offset-6 intro-text hidden-sm hidden-xs wow animated fadeInUp">
+			<div class="col-xs-12 col-md-6 intro-text text-center-mobile wow animated fadeInUp">
 				<h2 class="heading">immixr</h2>
 				<h4 class="subheading">version 2.0</h4>
 				<p>An open-source Instagram collage for your website. 
 					<br>Easy to use. 
 					<br>Simple to modify. 
-					<br>Always free.</p>
-				<a href="#book" class="scrollto btn btn-white">About</a>
-				<a href="https://instagram.com/oauth/authorize/?client_id=b5eb537709484d56bf7e43fea59f8dbe&redirect_uri=file:///Users/bobbybayer/Downloads/immixr/immixr/authentication.html&response_type=token" class="btn btn-green">View on GitHub</a>
+					<br>Always free.
+				</p>
+				<a href="#book" id="aboutButton" class="scrollto btn btn-white">About</a>
+				<a href="https://github.com/rwbayer/immixr.js" class="btn btn-green">View on GitHub</a>
 			</div>
 	</div>
 </header>
 
 <nav class="navbar navbar-default">
 	<div class="container">
-		<!-- Brand and toggle get grouped for better mobile display -->
+		
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 				<span class="sr-only">Toggle navigation</span>
@@ -54,23 +56,22 @@
 			<a class="navbar-brand" href="#"><h2 class="heading">immixr</h2></a>
 		</div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
+		
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right main-nav">
 				<li><a href="#book" class="scrollto">about</a></li>
 				<li><a href="#reviews" class="scrollto">examples</a></li>
-				<li><a href="#author" class="scrollto">created by</a></li>
 				<li><a href="#contact" class="scrollto">contact</a></li>
-				<li><a href="#" class="btn btn-green">view on GitHub</a></li>
+				<li><a href="https://github.com/rwbayer/immixr.js" class="btn btn-green">view on GitHub</a></li>
 			</ul>
-		</div><!-- /.navbar-collapse -->
-	</div><!-- /.container-fluid -->
+		</div>
+	</div>
 </nav>
 
 <section id="book">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
+			<div id="tablet" class="col-md-6">
 				<div class="book-preview">
 					<img src="img/kindle.png" class="background-device" alt="">
 					<div class="device-preview">
@@ -80,9 +81,9 @@
 			</div>
 			<div class="col-md-6">
 				<h2 class="heading wow animated fadeInUp">About</h2>
-				<h4 class="subheading wow animated fadeInUp"><strong>immixr</strong> boosts visitor engagement by providing an interesting, beautiful collage that allows users to incorporate social proof &agrave; la Instagram.</h4>
+				<h4 class="subheading wow animated fadeInUp"><strong>immixr</strong> boosts visitor engagement by making it easy to incorporate an Instagram collage in your site.</h4>
 				<p class="small wow animated fadeInUp">The collage is customizable, allowing users to decide the distance between images, the size of the images, and the opacity of the images.</p>
-				<p class="small wow animated fadeInUp"><strong>immixr</strong> expands to fill the height and width of its parent element, making it easy to create interesting backgrounds for personal pages or businesses or a creative segue between sections on your site.</p>
+				<p class="small wow animated fadeInUp"><strong>immixr</strong> expands to fill the height and width of its parent element, making it easy to create interesting backgrounds or a creative segue between sections on your site.</p>
 			</div>
 		</div>
 	</div>
@@ -90,9 +91,9 @@
 
 <section class="call-to-action">
 	<div class="container">
-		<div class="row">
+		<div class="row segue-row">
 			<div class="col-md-8 col-md-offset-2 text-center wow animated fadeInUp">
-				<p class="white"><strong>immixr</strong> makes it easy to integrate your Instagram feed into your page using a <strong>beautiful, customizable collage</strong></p>
+				<p class="white" style="margin-top: 0px;"><strong>immixr</strong> makes it easy to integrate your Instagram feed into your page using a <strong>beautiful, customizable collage</strong></p>
 			</div>
 		</div>
 	</div>
@@ -118,28 +119,33 @@
 			<div class="owl-reviews">
 				<div class="item">
 					<div class="review text-center wow animated fadeInUp">
-						<img src="img/grid.png" class="reviewer-pic" alt="">
-						<h4 class="subheading reviewer-name">Your Site Here</h4>
-						<h6 class="subheading muted reviewer-city">want to be featured?</h6>
-						<p class="small">Email <a href="mailto: hello@immixr.me" target="_blank">hello@immixr.me</a> with a link to your site where you use immixr to be featured here!</p>
+						<img src="img/rwbayer.png" class="reviewer-pic" alt="">
+						<h4 class="subheading reviewer-name"><a href="http://rwbayer.com/" target="_blank">rwbayer.com</a></h4>
+						<h6 class="subheading muted reviewer-city">my personal site</h6>
+						<p class="small">This project's inspiration came from my personal site creation. Check it out here!</p>
 					</div>
 				</div>
+				
+				
 				<div class="item">
 					<div class="review text-center wow animated fadeInUp">
-						<img src="img/grid.png" class="reviewer-pic" alt="">
-						<h4 class="subheading reviewer-name">This Site!</h4>
+						<img src="img/immixr.png" class="reviewer-pic" alt="">
+						<h4 class="subheading reviewer-name"><a href="http://www.immixr.me/" target="_blank">This Site!</a></h4>
 						<h6 class="subheading muted reviewer-city">3 examples of immixr on this site</h6>
-						<p class="small">The landing section, the tablet screen above, and the banner behind the "try immixr" section below are all examples of immixr in action.</p>
+						<p class="small">The <a href="#land" class="scrollto">landing section</a>, <a href="#book" class="scrollto">the tablet screen above</a>, and the banner behind the "try immixr" section below are all examples of immixr in action.</p>
 					</div>
 				</div>
+				
+				
 				<div class="item">
 					<div class="review text-center wow animated fadeInUp">
 						<img src="img/grid.png" class="reviewer-pic" alt="">
-						<h4 class="subheading reviewer-name">Your Site Here</h4>
+						<h4 class="subheading reviewer-name"><a href="mailto: hello@immixr.me" target="_blank" style="display: inline;">Your Site Here</a></h4>
 						<h6 class="subheading muted reviewer-city">want to be featured?</h6>
 						<p class="small">Email <a href="mailto: hello@immixr.me" target="_blank">hello@immixr.me</a> with a link to your site where you use immixr to be featured here!</p>
 					</div>
 				</div>
+				
 				<!-- <div class="item">
 					<div class="review text-center wow animated fadeInUp">
 						<img src="img/reviewers/1.png" class="reviewer-pic" alt="">
@@ -190,70 +196,18 @@
 	</div>
 </section>
 
-<section id="author">
+<section id="bannerBelow" class="call-to-action">
+	<div id="immixr3"></div>
 	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="row author">
-					<div class="col-sm-4">
-						<img src="img/author.png" alt="" class="pic">
-					</div>
-					<div class="col-sm-8 author-name">
-						<h2 class="heading wow animated fadeInUp">Robert Bayer</h2>
-						<h4 class="subheading muted wow animated fadeInUp">@rwbayer</h4>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<p class="small muted-light wow animated fadeInUp">The original version of <strong>immixr</strong> was created at Cal Hacks 2014 by Augustus Boling and myself. The project has always been focused on beautiful design and was even recognized by sponsors at the hackathon for focusing on delivering a beautiful user interface. Since the hackathon, the goal of the project has changed pretty drastically from a social media aggregator to be a simple, background that captures viewers' interest, but the focus on a great experience has remained. I've continued development on my own and I'm excited to see how (or if) people use <strong>immixr</strong>. <a href="#" class="green-link">read more >></a></p>
-					</div>
-				</div>
-			</div> <!-- col-md-6 author -->
-			<div class="col-md-4 col-md-offset-2 text-right">
-				<h4 class="subheading muted no-margin wow animated fadeInUp">Want to connect? Reach out or learn more on any of these sites.</h4>
-
-				<h4 class="heading wow animated fadeInUp"><a href="#" target="_blank">rwbayer.com</a></h4>
-		
-				<h4 class="heading wow animated fadeInUp"><a href="#" target="_blank">linkedin.com/in/rwbayer</a></h4>
-			
-				<h4 class="heading wow animated fadeInUp"><a href="#" target="_blank">github.com/rwbayer</a></h4>
-			
-				<h4 class="heading wow animated fadeInUp"><a href="#" target="_blank">twitter.com/rwbayer</a></h4>
-			
-				<h4 class="heading wow animated fadeInUp"><a href="#" target="_blank">instagram.com/rwbayer</a></h4>
-					
-				
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="call-to-action">
-	<div class="container">
-		<div class="row">
+		<div class="row segue-row">
 			<div class="col-md-8 text-left text-center-mobile wow animated fadeInUp">
 				<h2 class="heading white top-fit">try immixr</h2>
 				<h4 class="subheading white no-margin">Join other immixr users and use it on your site now.</h4>
 			</div>
 			<div class="col-md-4 text-right wow animated fadeInUp text-center-mobile">
-				<a href="#" class="btn btn-white sample-button">Get Started on GitHub</a>
+				<a href="https://github.com/rwbayer/immixr.js" target="_blank" class="btn btn-white sample-button github">Get Started on GitHub</a>
 			</div>
 		</div>
-	</div>
-</section>
-
-<section id="sample-form">
-	<div class="container">
-		<form id="submit-frm" class="sample-form">
-			<div class="row">
-				<div class="col-sm-6 col-sm-offset-2">
-					<input type="text" class="form-control" name="firstname" placeholder="Instagram Username" data-validation="required">
-				</div>
-				<div class="col-sm-2">
-					<input type="submit" class="btn btn-green sign-up-button sample-button-done" value="Get Started">
-				</div>
-			</div>
-		</form>
 	</div>
 </section>
 
@@ -266,14 +220,14 @@
 				
 				<div class="details">
 					<h6 class="heading no-margin">Submit an Issue on GitHub</h6>
-					<p class="small muted wow animated fadeInUp no-margin">Go to <a href="#" class="green-link" target="_blank">immixr's issues page</a> on GitHub. <br>
+					<p class="small muted wow animated fadeInUp no-margin">Go to <a href="https://github.com/rwbayer/immixr.js/issues" class="green-link" target="_blank">immixr's issues page</a> on GitHub. <br>
 					If you don't already see your issue posted, add a new issue.</p>
 				</div>
 				
 				<h4 class="subheading muted no-margin wow animated fadeInUp">Just want to say hi?</h4>
 				<div class="details">
 					<h6 class="heading no-margin">tweet me:
-					<a href="#" target="_blank" class="green-link">@rwbayer</a></h6>
+					<a href="https://twitter.com/rwbayer" target="_blank" class="green-link">@rwbayer</a></h6>
 				</div>
 				
 
@@ -284,7 +238,7 @@
 				
 				<div class="details">
 					<h6 class="heading no-margin">Create a Pull-Request on GitHub</h6>
-					<p class="small muted wow animated fadeInUp no-margin">Go to <a href="#" class="green-link" target="_blank">immixr's pull request page</a> on GitHub.<br>
+					<p class="small muted wow animated fadeInUp no-margin">Go to <a href="https://github.com/rwbayer/immixr.js/pulls" class="green-link" target="_blank">immixr's pull request page</a> on GitHub.<br>
 					If you want to talk before you get started, <a href="mailto: hello@immixr.me" target="_blank">email me</a>.</p>
 				</div>
 			</div>
@@ -295,8 +249,8 @@
 <footer>
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6 text-left text-center-mobile">
-				<p class="copyright small muted">Based on the <a href="https://www.behance.net/gallery/26094467/Bukku-Free-HTMLCSS-BookeBook-Template" target="_blank">Bukku Template</a></p>
+			<div class="col-xs-12 text-left text-center-mobile">
+				<p class="copyright small muted">Created by <a href="http://rwbayer.com/" target="_blank">Robert Bayer</a>. Special thanks to <a href="https://github.com/gusboling" target="_blank">Gus Boling</a>. Based on the <a href="https://www.behance.net/gallery/26094467/Bukku-Free-HTMLCSS-BookeBook-Template" target="_blank">Bukku Template</a></p>
 			</div>
 		</div>
 	</div>
@@ -304,13 +258,11 @@
 
 </div>
 
-<div class="notification-box"><span>working...</span></div>
 <div class="mobile-nav">
 	<ul class="menu">
 		
 	</ul>
 </div>
-
 
 
 <script src="js/jquery-1.11.1.min.js"></script>
@@ -328,6 +280,7 @@
 <!-- Include immixr JS -->
 <script src="js/immixr.js"></script>
 <script src="js/immixr2.js"></script>
+<script src="js/immixr3.js"></script>
 
 
 </body>

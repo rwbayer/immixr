@@ -66,7 +66,7 @@ a:hover {
 }
 
 .muted {
-	color:#bbbbbb !important;
+	color:#bbbbbb;
 }
 
 .muted-light {
@@ -167,6 +167,40 @@ header .intro-text {
 		margin:0 auto;
 		bottom:-160px;
 	}
+
+	a#aboutButton {
+		display: none;
+	}
+
+	
+	.segue-row {
+		margin-top: 50px;
+	}
+
+	.segue-row p.white {
+		font-size: 20px;
+	}
+
+
+}
+@media(max-width: 1199px) {
+	div#tablet {
+		display: none;
+	}
+}
+@media(min-width: 1200px) {
+	div#tablet {
+		display: block;
+	}
+}
+@media(min-width:769px) { 
+	a#aboutButton {
+		display: inline-block;
+	}
+
+	.segue-row {
+		margin-top: 90px;
+	}
 }
 
 .container {
@@ -176,6 +210,9 @@ header .intro-text {
 .main-nav {
 
 }
+
+
+
 
 .navbar {
 	position: relative;
@@ -257,6 +294,9 @@ header .intro-text {
 	border:2px solid #7cc576;
 	color:white;
 }
+a.btn.btn-white.sample-button.github {
+	z-index: 1000;
+}
 
 a.green-link {
 	color: #7cc576;
@@ -310,7 +350,10 @@ section {
 
 section.call-to-action {
 	background: #7cc576;
-	padding:100px 0;
+	padding: 0 0;
+	width: 100%;
+	height: 301px;
+	position: relative;
 }
 
 section.reviews {
@@ -399,6 +442,9 @@ section.reviews {
 .owl-book  .item:hover .overlay {
 	opacity: 1;
 }
+.owl-item {
+	min-width: 380px;
+}
 .owl-book .item img {
 	width:100%;
 	margin:15% auto;
@@ -426,6 +472,15 @@ section.reviews {
 .owl-book .item .overlay > a:hover {
 	color:white;
 	background: #7cc576;
+}
+
+h4.subheading a {
+	color: #6a727b;
+	transition: all 0.5s ease;
+}
+h4.subheading a:hover {
+	color: #aaaaaa;
+	
 }
 
 .owl-reviews .item {
@@ -853,8 +908,8 @@ div.device-preview {
 	width: 300px;
 	height: 512px;
 	z-index: 999;
-	top: 50px;
-	left: 48px;
+	top: 45px;
+	left: 49px;
 }
 .no-bottom-margin {
 	margin-bottom: 0px !important;

@@ -3,8 +3,23 @@ function immixr2(gutterWidth, opacity, userID, accessToken, biggestWidth) {
       //initiate feed variable
       var instagramFeed;
 
-      // if window is resized, reload the page to fix layout
-      $(window).resize(function(){location.reload();});
+       // iOS resizing fix from: http://stackoverflow.com/questions/8898412/iphone-ipad-triggering-unexpected-resize-events
+      var windowWidth = $(window).width();
+      
+      // if window is resized (for real), reload the page to fix layout
+      $(window).resize(function(){
+        // Check window width has actually changed and it's not just iOS triggering a resize event on scroll
+        if ($(window).width() != windowWidth) {
+
+            // Update the window width for next time
+            windowWidth = $(window).width();
+
+            // Do stuff here
+             location.reload();
+        }
+
+        // Otherwise do nothing
+      });
 
       // get instagram feed
         $.ajax({
@@ -73,8 +88,7 @@ function draw2(instagramFeed, gutterWidth, biggestWidth) {
   while(availableHeight > smallWidth) {
 
     // if there's no more room on this row, then move to the next row if possible..
-    if(availableWidth < smallWidth) {
-      // before moving to the next row, set the width and height of the current row so it can be centered using explicit dimensions
+    if((availableWidth < smallWidth) && (availableHeight > (bigWidth + segmentWidth))) {      // before moving to the next row, set the width and height of the current row so it can be centered using explicit dimensions
       $(currentRow).css({width: elementWidth - availableWidth, height: (bigWidth + segmentWidth)});
       // reset left to start at one segment width
       left = segmentWidth;
@@ -111,6 +125,7 @@ function draw2(instagramFeed, gutterWidth, biggestWidth) {
         dataDivHeight += (smallWidth + segmentWidth);
         $(currentRow).css({width: elementWidth - availableWidth, height: smallWidth + segmentWidth});
         lastRowisSmall = 1;
+        break;
       }
       // increment the cursor to the next image
       cursor++;
